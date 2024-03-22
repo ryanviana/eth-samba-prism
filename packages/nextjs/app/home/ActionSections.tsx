@@ -4,7 +4,7 @@ import { CubeIcon, GlobeAltIcon, ShieldCheckIcon } from "@heroicons/react/24/out
 
 const ActionSections = () => {
   return (
-    <div className="flex-grow bg-base-300 w-full my-16 px-8 py-12">
+    <div className="flex-grow bg-base-300 w-full px-8 py-20">
       <div className="flex flex-1 flex-col justify-start items-center mx-auto my-8">
         <h1 className="text-3xl sm:text-5xl py-2 text-center text-gradient ">
           Revolutionizing Digital

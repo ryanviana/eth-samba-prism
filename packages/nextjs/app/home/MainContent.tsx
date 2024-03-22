@@ -5,7 +5,7 @@ import Hero from "./Hero";
 
 const MainContent = () => {
   return (
-    <div className="flex sm:flex-row flex-col sm:items-start items-center sm:justify-start justify-start mt-10">
+    <div className="flex sm:flex-row flex-col sm:items-start items-center sm:justify-start justify-start my-20">
       <Hero />
       <ArtGenerator />
     </div>
