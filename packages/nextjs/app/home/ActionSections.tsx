@@ -1,31 +1,35 @@
 "use client";
 
-import Link from "next/link";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { CubeIcon, GlobeAltIcon, ShieldCheckIcon } from "@heroicons/react/24/outline";
 
 const ActionSections = () => {
   return (
-    <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
+    <div className="flex-grow bg-base-300 w-full my-16 px-8 py-12">
+      <div className="flex flex-1 flex-col justify-start items-center mx-auto my-8">
+        <h1 className="text-3xl sm:text-5xl py-2 text-center text-gradient ">
+          Revolutionizing Digital
+          <br />
+          Art and Fashion
+        </h1>
+        <p className="text-center my-2 font-light sm:w-1/2 w-full text-lg px-4">
+          Dive into the future where creativity meets blockchain. Generate and turn your AI-powered art into NFTs, then
+          wear your innovation with custom-designed t-shirts.
+        </p>
+      </div>
       <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
-        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-          <BugAntIcon className="h-8 w-8 fill-secondary" />
+        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-sm rounded-3xl">
+          <GlobeAltIcon className="h-8 w-8 fill-secondary" />
+          <p>Harness AI to create art validated on-chain, setting a new standard for digital creativity.</p>
+        </div>
+        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-sm rounded-3xl">
+          <ShieldCheckIcon className="h-8 w-8 fill-secondary" />
           <p>
-            Tinker with your smart contract using the{" "}
-            <Link href="/debug" passHref className="link">
-              Debug Contracts
-            </Link>{" "}
-            tab.
+            Secure your art as NFTs with transparent ownership and royalties, fostering a fair ecosystem for creators.
           </p>
         </div>
-        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-          <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-          <p>
-            Explore your local transactions with the{" "}
-            <Link href="/blockexplorer" passHref className="link">
-              Block Explorer
-            </Link>{" "}
-            tab.
-          </p>
+        <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-sm rounded-3xl">
+          <CubeIcon className="h-8 w-8 fill-secondary" />
+          <p>Transform digital creations into tangible fashion, bringing the virtual closer to the physical world.</p>
         </div>
       </div>
     </div>
