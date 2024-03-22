@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import NFTCard from "../../components/NFTCard";
 import { mockNFTs } from "../../utils/mockNFTs";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
@@ -15,6 +16,14 @@ interface NFTItem {
 const MarketplaceHighlights: React.FC = () => {
   const latestNFTs: NFTItem[] = [...mockNFTs].reverse().slice(0, 5);
 
+  const router = useRouter();
+
+  const handleViewAll = () => {
+    return () => {
+      router.push("/marketplace");
+    };
+  };
+
   return (
     <div className="py-20">
       <div className="flex flex-grow flex-col items-start justify-start">
@@ -26,7 +35,10 @@ const MarketplaceHighlights: React.FC = () => {
             ))}
           </div>
           <div className="flex flex-col items-center justify-center gap-2 ml-10">
-            <button className="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer hover:bg-blue-700 transition duration-300 ease-in-out">
+            <button
+              className="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded-full cursor-pointer hover:bg-blue-700 transition duration-300 ease-in-out"
+              onClick={handleViewAll()}
+            >
               View All
               <ArrowRightIcon className="h-4 w-4 ml-2" />
             </button>
