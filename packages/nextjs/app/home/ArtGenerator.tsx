@@ -1,6 +1,5 @@
 // Inside packages/nextjs/app/home/ArtGenerator.tsx
 import React, { useState } from "react";
-import Image from "next/image";
 
 const ArtGenerator: React.FC = () => {
   const [showResult, setShowResult] = useState(false);
@@ -46,9 +45,7 @@ const ArtGenerator: React.FC = () => {
               {showLoadingText ? (
                 <code>Your art is being created...</code>
               ) : (
-                <div className="flex flex-col items-center card-actions justify-end">
-                  <Image src="path/to/generated/art.png" alt="Generated Art" fill />
-                </div>
+                <div className="flex flex-col items-center card-actions justify-end">Generated image will be here</div>
               )}
             </div>
           </div>
