@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 const style = {
-  wrapper: `bg-base-100 flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group`,
+  wrapper: `bg-base-100 flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group transition-transform duration-300 ease-in-out transform hover:scale-105 shadow-xl shadow-secondary`,
   imgContainer: `relative h-2/3 w-full overflow-hidden flex justify-center items-center`,
   nftImg: `w-full h-full object-cover transition-transform duration-300 ease-in-out`,
   details: `p-3`,
@@ -15,8 +14,8 @@ const style = {
   priceTag: `font-semibold text-sm`,
   priceValue: `flex items-center text-xl font-bold mt-2`,
   ethLogo: `h-5 mr-2`,
-  likes: `text-[#8a939b] font-bold flex items-center w-full justify-end mt-3`,
-  likeIcon: `text-xl mr-2`,
+  likes: `text-[#8a939b] flex items-center w-full justify-end mt-3`,
+  likeIcon: `text-md w-4 mr-2`,
   orderTab: `absolute bottom-0 left-0 right-0 top-auto bg-base-300 py-5 px-2 rounded-b-2xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col justify-center items-center`,
   sizeLabel: `mr-2 self-center`,
   sizeWrapper: `flex items-center justify-center mb-5`,
@@ -93,7 +92,7 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
   return (
     <div className={style.wrapper}>
       <div className={style.imgContainer}>
-        <Image src={nftItem.image} alt={nftItem.name} className={style.nftImg} />
+        <img src={nftItem.image} alt={nftItem.name} className={style.nftImg} />
       </div>
       <div className={style.details}>
         <div className={style.info}>
@@ -105,7 +104,7 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
             <div className={style.infoRight}>
               <div className={style.priceTag}>Price</div>
               <div className={style.priceValue}>
-                <Image
+                <img
                   src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
                   alt="ETH Logo"
                   className={style.ethLogo}

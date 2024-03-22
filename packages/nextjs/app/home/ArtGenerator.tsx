@@ -47,7 +47,7 @@ const ArtGenerator: React.FC = () => {
                 <code>Your art is being created...</code>
               ) : (
                 <div className="flex flex-col items-center card-actions justify-end">
-                  <Image src="path/to/generated/art.png" alt="Generated Art" />
+                  <Image src="path/to/generated/art.png" alt="Generated Art" fill />
                 </div>
               )}
             </div>
