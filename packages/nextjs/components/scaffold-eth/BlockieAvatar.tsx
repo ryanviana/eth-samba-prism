@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { AvatarComponent } from "@rainbow-me/rainbowkit";
 import { blo } from "blo";
 
@@ -7,7 +8,7 @@ import { blo } from "blo";
 export const BlockieAvatar: AvatarComponent = ({ address, ensImage, size }) => (
   // Don't want to use nextJS Image here (and adding remote patterns for the URL)
   // eslint-disable-next-line @next/next/no-img-element
-  <img
+  <Image
     className="rounded-full"
     src={ensImage || blo(address as `0x${string}`)}
     width={size}

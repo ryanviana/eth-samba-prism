@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 const style = {
@@ -92,7 +93,7 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
   return (
     <div className={style.wrapper}>
       <div className={style.imgContainer}>
-        <img src={nftItem.image} alt={nftItem.name} className={style.nftImg} />
+        <Image src={nftItem.image} alt={nftItem.name} className={style.nftImg} />
       </div>
       <div className={style.details}>
         <div className={style.info}>
@@ -104,7 +105,7 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
             <div className={style.infoRight}>
               <div className={style.priceTag}>Price</div>
               <div className={style.priceValue}>
-                <img
+                <Image
                   src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg"
                   alt="ETH Logo"
                   className={style.ethLogo}
