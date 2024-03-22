@@ -2,6 +2,7 @@
 
 import ActionSections from "./home/ActionSections";
 import MainContent from "./home/MainContent";
+import MarketplaceHighlights from "./home/MarketplaceHighlights";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -10,6 +11,7 @@ const Home: NextPage = () => {
       <div className="flex items-center flex-col flex-grow pt-10">
         <MainContent />
         <ActionSections />
+        <MarketplaceHighlights />
       </div>
     </>
   );
