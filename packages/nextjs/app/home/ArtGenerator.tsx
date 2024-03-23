@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import designApi, { Design } from "../../utils/designApi";
 
 const ArtGenerator: React.FC = () => {
@@ -62,9 +63,11 @@ const ArtGenerator: React.FC = () => {
               <div className="card-body p-6">
                 <div className="flex flex-col items-center card-actions justify-end">
                   <figure>
-                    <img
+                    <Image
                       src={`data:image/jpeg;base64,${imageToBase64(latestDesign.image.data)}`}
                       alt="Generated Art"
+                      layout="fill"
+                      objectFit="cover"
                       style={{ width: "300px", height: "300px" }}
                     />
                   </figure>

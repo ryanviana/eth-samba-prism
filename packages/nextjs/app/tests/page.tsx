@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import designApi, { Design } from "../../utils/designApi";
 
 const Tests: React.FC = () => {
@@ -39,7 +40,12 @@ const Tests: React.FC = () => {
       <div>
         {designs.map(design => (
           <div key={design._id}>
-            <img src={`data:image/jpeg;base64,${Buffer.from(design.image.data).toString("base64")}`} />
+            <Image
+              src={`data:image/jpeg;base64,${Buffer.from(design.image.data).toString("base64")}`}
+              layout="fill"
+              objectFit="cover"
+              alt="Design Image"
+            />
             <p>{design.image_hash}</p>
             <p>{design.designId}</p>
           </div>
