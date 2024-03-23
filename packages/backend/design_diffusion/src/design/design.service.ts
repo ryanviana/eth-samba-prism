@@ -7,11 +7,14 @@ import { Design, DesignDocument } from './design.schema';
 import * as fs from 'fs';
 import * as path from 'path';
 import axios from 'axios';
+import * as crypto from 'crypto';
+import { DesignIdCounterService } from 'src/design_id_counter/design_id_counter.service';
 
 @Injectable()
 export class DesignService {
   constructor(
     @InjectModel(Design.name) private designModel: Model<DesignDocument>,
+    private counterService: DesignIdCounterService,
   ) {}
 
   private async toB64(imgPath: string) {
@@ -19,7 +22,14 @@ export class DesignService {
     return Buffer.from(data).toString('base64');
   }
 
-  private async getDesignFromExternalAPI(prompt: string): Promise<String> {
+  private async hashImageData(data: ArrayBuffer): Promise<string> {
+    const hash = crypto.createHash('sha256');
+    hash.update(new Uint8Array(data)); // Directly update the hash with your data
+    const digest = hash.digest('hex'); // Synchronously get the digest
+    return digest;
+  }
+
+  private async getDesignFromExternalAPI(prompt: string): Promise<Buffer> {
     const api_key = 'SG_44e57559c58654ee';
     const url = 'https://api.segmind.com/v1/sd1.5-inpainting';
 
@@ -49,20 +59,27 @@ export class DesignService {
       responseType: 'arraybuffer',
     });
 
-    fs.writeFileSync(path.resolve('output.jpg'), response.data, 'binary');
-    return Buffer.from(response.data).toString('base64');
+    // fs.writeFileSync(path.resolve('output.jpg'), response.data, 'binary');
+    // return Buffer.from(response.data).toString('base64');
+    return response.data;
   }
 
   async create(createDesignDto: CreateDesignDto): Promise<Design> {
     const { prompt, designId } = createDesignDto;
-    const imageBase64 = await this.getDesignFromExternalAPI(prompt);
+    const imageBuffer = await this.getDesignFromExternalAPI(prompt);
+    const imageHash = await this.hashImageData(imageBuffer);
 
     const createdDesign = new this.designModel({
       ...createDesignDto,
       designId,
-      image: imageBase64,
-      image_name: 'output.jpg',
+      image: imageBuffer,
+      image_hash: imageHash,
     });
+    // const newDesign = createdDesign.save();
+    // return (await newDesign).id;
+
+    await this.counterService.updateSeqByName('design', designId);
+
     return createdDesign.save();
   }
 

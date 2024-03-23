@@ -48,7 +48,17 @@ export class DesignIdCounterService {
   }
 
   async getSeqByName(name: string): Promise<number> {
-    const counter = await this.counterModel.findOne({ name: name }).exec();
+    const counter = await this.counterModel.findOne({ name }).exec();
     return counter.seq;
+  }
+
+  async updateSeqByName(name: string, sequenceValue: number) {
+    return await this.counterModel
+      .findOneAndUpdate(
+        { name },
+        { $set: { seq: sequenceValue } },
+        { new: true },
+      )
+      .exec();
   }
 }

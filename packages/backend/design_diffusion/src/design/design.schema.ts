@@ -13,19 +13,15 @@ export class Design {
   _id: mongoose.Schema.Types.ObjectId;
 
   @ApiProperty({
-    description: 'Image name',
-    example: 'SampleImage',
-  })
-  @Prop({ required: true })
-  image_name: string;
-
-  @ApiProperty({
     description: 'JPEG image',
     type: 'string',
     format: 'binary',
   })
   @Prop()
   image: Buffer;
+
+  @Prop()
+  image_hash: string;
 
   @ApiProperty({
     description: 'Design ID',
