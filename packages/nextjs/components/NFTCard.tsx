@@ -26,7 +26,7 @@ const style = {
   modal: `fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-10 shadow-xl`,
   modalContent: `bg-base-100 rounded-3xl shadow-md shadow-secondary border border-base-300 max-w-lg w-full p-6 relative`,
   closeModalButton: `bg-base-100 p-2 rounded-full absolute top-4 right-2 mt-2 mr-2`,
-  addressInput: `input input-ghost h-[2.2rem] min-h-[2.2rem] p-2 border w-full font-medium placeholder:text-accent/50 text-gray-400 bg-base-300 rounded-sm text-accent mb-2`,
+  addressInput: `input input-ghost h-[2.2rem] min-h-[2.2rem] p-2 border w-full font-medium placeholder:text-accent/50 text-gray-400 bg-base-200 rounded-sm text-accent mb-2`,
   addressHeader: `mt-1 mb-4 text-lg`, // New style for the header text
   confirmOrderButton: `bg-blue-500 text-white py-2 px-4 rounded w-full cursor-pointer`,
 };
