@@ -11,12 +11,12 @@ const style = {
   info: `flex justify-between drop-shadow-xl`,
   infoLeft: `flex-0.6 flex-wrap`,
   collectionName: `font-semibold text-sm`,
-  assetName: `font-bold text-lg mt-2`,
+  assetName: `font-light text-sm mt-1`,
   infoRight: `flex-0.4 text-right`,
   priceTag: `font-semibold text-sm`,
   priceValue: `flex items-center text-xl font-bold mt-2`,
   ethLogo: `h-5 mr-2`,
-  likes: `text-[#8a939b] flex items-center w-full justify-end mt-3`,
+  likes: `text-[#8a939b] flex items-center w-full justify-start font-normal mt-1`,
   likeIcon: `text-md w-4 mr-2`,
   orderTab: `absolute bottom-0 left-0 right-0 top-auto bg-base-300 py-5 px-2 rounded-b-2xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col justify-center items-center`,
   sizeLabel: `mr-2 self-center`,
@@ -100,6 +100,10 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
         <div className={style.info}>
           <div className={style.infoLeft}>
             <div className={style.collectionName}>{title}</div>
+            <div className={style.likes}>
+              <HeartIcon className={style.likeIcon} />
+              {nftItem.likes}
+            </div>
             <div className={style.assetName}>{nftItem.name}</div>
           </div>
           {isListed && (
@@ -115,10 +119,6 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
               </div>
             </div>
           )}
-        </div>
-        <div className={style.likes}>
-          <HeartIcon className={style.likeIcon} />
-          {nftItem.likes}
         </div>
       </div>
       <div className={style.orderTab}>
