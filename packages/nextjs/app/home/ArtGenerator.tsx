@@ -42,11 +42,11 @@ const ArtGenerator: React.FC = () => {
 
   return (
     <div className="flex flex-col sm:min-w-[700px] items-center justify-center sm:px-5 px-2">
-      <div className="bg-base-100 rounded-3xl shadow-md shadow-secondary border border-base-300 flex flex-col p-5 w-full">
+      <div className="blue-glassmorphism rounded-3xl shadow-md shadow-secondary border border-base-300 flex flex-col p-5 w-full">
         <div className="flex flex-col gap-3 py-5 first:pt-0 last:pb-1">
           <p className="font-medium my-0 break-words">AI Art Generator</p>
           <div className="flex flex-row items-center gap-1.5 w-full">
-            <div className="flex border-2 border-base-300 bg-base-200 rounded-full text-accent w-full">
+            <div className="flex border-2 border-base-300 blue-glassmorphism rounded-full text-accent w-full">
               <input
                 className="input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400"
                 placeholder="Describe your art idea"
@@ -65,7 +65,7 @@ const ArtGenerator: React.FC = () => {
           {loading ? (
             <LoadingPlaceholder />
           ) : latestDesign ? (
-            <div className="card w-full bg-base-100 shadow-lg image-full">
+            <div className="card w-full blue-glassmorphism shadow-lg image-full">
               <div className="card-body p-6">
                 <figure>
                   <Image

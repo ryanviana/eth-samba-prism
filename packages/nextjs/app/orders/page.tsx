@@ -50,7 +50,7 @@ const Orders: React.FC = () => {
           Orders Status
         </h1>
         <div className="flex flex-col w-full items-center justify-center">
-          <div className="flex sm:flex-row flex-col bg-base-100 sm:items-start items-center justify-between w-full py-6 sm:px-12 px-4 rounded-3xl shadow-md shadow-secondary border border-base-300">
+          <div className="flex sm:flex-row flex-col blue-glassmorphism sm:items-start items-center justify-between w-full py-6 sm:px-12 px-4 rounded-3xl shadow-md shadow-secondary border border-base-300">
             {statusSteps.map((step, index) => (
               <div key={index} className={`flex flex-col items-center ${index > 0 ? "" : ""}`}>
                 <div className={`text-3xl sm:mt-0 mt-4${statusClass(step.name)}`}>{step.icon}</div>

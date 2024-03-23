@@ -50,7 +50,7 @@ const TransactionPage: NextPage<PageProps> = ({ params }: PageProps) => {
       {transaction ? (
         <div className="overflow-x-auto">
           <h2 className="text-3xl font-bold mb-4 text-center text-primary-content">Transaction Details</h2>{" "}
-          <table className="table rounded-lg bg-base-100 w-full shadow-lg md:table-lg table-md">
+          <table className="table rounded-lg blue-glassmorphism w-full shadow-lg md:table-lg table-md">
             <tbody>
               <tr>
                 <td>

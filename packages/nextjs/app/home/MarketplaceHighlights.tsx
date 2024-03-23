@@ -38,9 +38,9 @@ const MarketplaceHighlights: React.FC = () => {
   );
 
   return (
-    <div className="py-20">
-      <div className="flex flex-grow flex-col items-start justify-start">
-        <h1 className="text-3xl sm:text-5xl">Latest Collections</h1>
+    <div className="flex flex-col flewx-grow py-20 gradient-bg-marketplacehl">
+      <div className="flex flex-grow flex-col items-start justify-start mt-20">
+        <h1 className="text-3xl sm:text-5xl text-gradient">Latest Collections</h1>
         <div className="flex items-center justify-between w-full my-8">
           {isLoading ? (
             <SkeletonPlaceholder />

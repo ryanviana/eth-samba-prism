@@ -41,7 +41,7 @@ const Designs = () => {
         {isLoading ? (
           <LoadingPlaceholder />
         ) : (
-          <div className="justify-between items-center flex flex-grow flex-col p-8 gap-4 bg-base-100 rounded-3xl shadow-md shadow-secondary border border-base-300 w-full">
+          <div className="justify-between items-center flex flex-grow flex-col p-8 gap-4 blue-glassmorphism rounded-3xl shadow-md shadow-secondary border border-base-300 w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center items-start">
               {designs.map(design => (
                 <NFTCard

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 const style = {
-  wrapper: `bg-base-100 flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group shadow-xl`,
+  wrapper: `blue-glassmorphism flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group shadow-xl`,
   imgContainer: `relative h-2/3 w-full overflow-hidden flex justify-center items-center`,
   nftImg: `w-full h-full object-cover transition-transform duration-300 ease-in-out`,
   details: `p-3`,
@@ -19,15 +19,15 @@ const style = {
   ethLogo: `h-5 mr-2`,
   likes: `text-[#8a939b] flex items-center w-full justify-start font-normal mt-1`,
   likeIcon: `text-md w-4 mr-2`,
-  orderTab: `absolute bottom-0 left-0 right-0 top-auto bg-base-300 py-5 px-2 rounded-b-2xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col justify-center items-center`,
+  orderTab: `absolute bottom-0 left-0 right-0 top-auto bg-[#202225] py-5 px-2 rounded-b-2xl transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out flex flex-col justify-center items-center`,
   sizeLabel: `mr-2 self-center`,
   sizeWrapper: `flex items-center justify-center mb-5`,
-  sizeSelect: `inline-block bg-base-100 py-1 px-3 rounded text-center cursor-pointer`,
+  sizeSelect: `inline-block blue-glassmorphism py-1 px-3 rounded text-center cursor-pointer`,
   orderButton: `bg-blue-500 text-white py-2 px-4 rounded w-full text-lg font-medium cursor-pointer`,
   modal: `fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-10 shadow-xl`,
-  modalContent: `bg-base-100 rounded-3xl shadow-md shadow-secondary border border-base-300 max-w-lg w-full p-6 relative`,
-  closeModalButton: `bg-base-100 p-2 rounded-full absolute top-4 right-2 mt-2 mr-2`,
-  addressInput: `input input-ghost h-[2.2rem] min-h-[2.2rem] p-2 border w-full font-medium placeholder:text-accent/50 text-gray-400 bg-base-200 rounded-sm text-accent mb-2`,
+  modalContent: `blue-glassmorphism rounded-3xl shadow-md shadow-secondary border border-base-300 max-w-lg w-full p-6 relative`,
+  closeModalButton: `blue-glassmorphism p-2 rounded-full absolute top-4 right-2 mt-2 mr-2`,
+  addressInput: `input input-ghost h-[2.2rem] min-h-[2.2rem] p-2 border w-full font-medium placeholder:text-accent/50 text-gray-400 blue-glassmorphism rounded-sm text-accent mb-2`,
   addressHeader: `mt-1 mb-4 text-lg`, // New style for the header text
   confirmOrderButton: `bg-blue-500 text-white py-2 px-4 rounded w-full cursor-pointer`,
 };

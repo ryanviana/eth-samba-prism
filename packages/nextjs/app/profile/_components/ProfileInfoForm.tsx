@@ -17,7 +17,7 @@ const ProfileInfoForm = () => {
   };
 
   const EditButton = () => (
-    <button type="button" onClick={() => setEditMode(true)} className="btn btn-secondary btn-sm">
+    <button type="button" onClick={() => setEditMode(true)} className="btn btn-sm mt-2">
       Edit ✏️
     </button>
   );
@@ -27,13 +27,13 @@ const ProfileInfoForm = () => {
       <div className="flex flex-col items-start sm:w-[70%] w-full sm:px-0 px-4">
         <h1 className="text-3xl sm:text-4xl text-gradient pt-10 pb-4">Account</h1>
         <div className="flex flex-row justify-between items-center w-full">
-          <div className="flex flex-grow flex-col justify-start items-start p-8 gap-4 bg-base-100 rounded-3xl shadow-md shadow-secondary border border-base-300 flex flex-col p-5 w-full">
+          <div className="flex flex-grow flex-col justify-start items-start p-8 gap-4 blue-glassmorphism rounded-3xl shadow-md shadow-secondary border border-base-300 w-full">
             <form onSubmit={handleSubmit} className="flex flex-col w-full gap-4">
               {editMode ? (
                 <>
                   <div>
                     <label className="text-md font-bold">Name</label>
-                    <div className="flex border-2 border-base-300 bg-base-200 rounded-full text-accent w-full">
+                    <div className="flex border-2 border-base-300 rounded-full text-accent w-full">
                       <input
                         value={name}
                         onChange={e => setName(e.target.value)}
@@ -43,7 +43,7 @@ const ProfileInfoForm = () => {
                   </div>
                   <div>
                     <label className="text-md font-bold">Email</label>
-                    <div className="flex border-2 border-base-300 bg-base-200 rounded-full text-accent w-full">
+                    <div className="flex border-2 border-base-300 rounded-full text-accent w-full">
                       <input
                         value={email}
                         onChange={e => setEmail(e.target.value)}
@@ -54,7 +54,7 @@ const ProfileInfoForm = () => {
                   </div>
                   <div>
                     <label className="text-md font-bold">Wallet Address</label>
-                    <div className="flex border-2 border-base-300 bg-base-200 rounded-full text-accent w-full">
+                    <div className="flex border-2 border-base-300 rounded-full text-accent w-full">
                       <input
                         value={walletAddress}
                         onChange={e => setWalletAddress(e.target.value)}
@@ -64,7 +64,7 @@ const ProfileInfoForm = () => {
                   </div>
                   <div>
                     <label className="text-md font-bold">Delivery Address</label>
-                    <div className="flex border-2 border-base-300 bg-base-200 rounded-full text-accent w-full">
+                    <div className="flex border-2 border-base-300 rounded-full text-accent w-full">
                       <textarea
                         value={deliveryAddress}
                         onChange={e => setDeliveryAddress(e.target.value)}
@@ -79,15 +79,15 @@ const ProfileInfoForm = () => {
                   </div>
                 </>
               ) : (
-                <div className="">
+                <div className="flex flex-col gap-1">
                   <label className="text-md font-bold">Name</label>
-                  <div className="input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${name}`}</div>
-                  <label className="text-md font-bold">Email</label>
-                  <div className="input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${email}`}</div>
-                  <label className="text-md font-bold">Wallet Address</label>
-                  <div className="input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${walletAddress}`}</div>
-                  <label className="text-md font-bold">Delivery Address</label>
-                  <div className="input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-40 min-h-10">{`${deliveryAddress}`}</div>
+                  <div className="flex flex-row items-center input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${name}`}</div>
+                  <label className="text-md font-bold mt-2">Email</label>
+                  <div className="flex flex-row items-center input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${email}`}</div>
+                  <label className="text-md font-bold mt-2">Wallet Address</label>
+                  <div className="flex flex-row items-center input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${walletAddress}`}</div>
+                  <label className="text-md font-bold mt-2">Delivery Address</label>
+                  <div className="flex flex-row items-center input input-ghost focus-within:border-transparent focus:outline-none focus:bg-transparent focus:text-gray-400 h-[2.2rem] min-h-[2.2rem] px-4 border w-full font-medium placeholder:text-accent/50 text-gray-400 min-h-10">{`${deliveryAddress}`}</div>
                   {!editMode && <EditButton />}
                 </div>
               )}
