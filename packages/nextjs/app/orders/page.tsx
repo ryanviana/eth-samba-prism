@@ -18,7 +18,7 @@ interface StatusStep {
 }
 
 const Orders: React.FC = () => {
-  const [currentStatus, setCurrentStatus] = useState<string>(status);
+  const [currentStatus, setCurrentStatus] = useState<string>("Waiting Producer");
 
   const statusSteps: StatusStep[] = [
     { name: "Waiting Producer", icon: <ClockIcon className="h-6 w-6" />, date: "11/03/2024 11:02" },
