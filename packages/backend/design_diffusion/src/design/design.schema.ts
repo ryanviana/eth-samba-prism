@@ -19,9 +19,6 @@ export class Design {
   @Prop({ required: true })
   image_name: string;
 
-  // For storing the actual JPEG image, consider using a Buffer type.
-  // However, it's generally not advised to store images directly in databases due to performance issues.
-  // Instead, storing images in a storage service like AWS S3 and saving the link is preferable.
   @ApiProperty({
     description: 'JPEG image',
     type: 'string',
