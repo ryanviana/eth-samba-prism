@@ -9,7 +9,8 @@ const ArtGenerator: React.FC = () => {
   const [latestDesign, setLatestDesign] = useState<Design | null>(null);
 
   const handleSubmit = async () => {
-    setLoading(true);
+    setLoading(true); // Start loading
+    setShowResult(true); // Immediately show result area
     try {
       // Create a new design with the provided prompt
       await designApi.createDesign(prompt);
@@ -20,8 +21,7 @@ const ArtGenerator: React.FC = () => {
     } catch (error) {
       console.error("Failed to create or fetch designs", error);
     }
-    setLoading(false);
-    setShowResult(true);
+    setLoading(false); // End loading
   };
 
   // Helper function to convert image data to base64 string
@@ -33,6 +33,12 @@ const ArtGenerator: React.FC = () => {
     e.preventDefault();
     console.log("Generate NFT");
   };
+
+  const LoadingPlaceholder = () => (
+    <div className="animate-pulse flex flex-col items-center justify-center h-40 w-full bg-gray-200 rounded-lg">
+      <div className="text-lg text-gray-500">Your art is being created...</div>
+    </div>
+  );
 
   return (
     <div className="flex flex-col sm:min-w-[700px] items-center justify-center sm:px-5 px-2">
@@ -57,21 +63,19 @@ const ArtGenerator: React.FC = () => {
       {showResult && (
         <div className="w-full mt-4 flex flex-col items-center gap-4">
           {loading ? (
-            <code>Your art is being created...</code>
+            <LoadingPlaceholder />
           ) : latestDesign ? (
             <div className="card w-full bg-base-100 shadow-lg image-full">
               <div className="card-body p-6">
-                <div className="flex flex-col items-center card-actions justify-end">
-                  <figure>
-                    <Image
-                      src={`data:image/jpeg;base64,${imageToBase64(latestDesign.image.data)}`}
-                      alt="Generated Art"
-                      layout="fill"
-                      objectFit="cover"
-                      style={{ width: "300px", height: "300px" }}
-                    />
-                  </figure>
-                </div>
+                <figure>
+                  <Image
+                    src={`data:image/jpeg;base64,${imageToBase64(latestDesign.image.data)}`}
+                    alt="Generated Art"
+                    width={200}
+                    height={200}
+                    objectFit="cover"
+                  />
+                </figure>
               </div>
             </div>
           ) : (
