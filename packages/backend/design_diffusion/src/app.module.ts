@@ -6,8 +6,13 @@ import { DesignModule } from './design/design.module';
 import { Design, DesignSchema } from './design/design.schema';
 import { DesignService } from './design/design.service';
 import { DesignController } from './design/design.controller';
-import { join } from 'path';
-import { ServeStaticModule } from '@nestjs/serve-static';
+import { DesignIdCounterModule } from './design_id_counter/design_id_counter.module';
+import { DesignIdCounterController } from './design_id_counter/design_id_counter.controller';
+import { DesignIdCounterService } from './design_id_counter/design_id_counter.service';
+import {
+  DesignIdCounter,
+  DesignIdCounterSchema,
+} from './design_id_counter/design_id_counter.schema';
 
 @Module({
   imports: [
@@ -17,8 +22,11 @@ import { ServeStaticModule } from '@nestjs/serve-static';
     ),
     MongooseModule.forFeature([{ name: Design.name, schema: DesignSchema }]),
     DesignModule,
+    MongooseModule.forFeature([
+      { name: DesignIdCounter.name, schema: DesignIdCounterSchema },
+    ]),
   ],
-  controllers: [AppController, DesignController],
-  providers: [AppService, DesignService],
+  controllers: [AppController, DesignController, DesignIdCounterController],
+  providers: [AppService, DesignService, DesignIdCounterService],
 })
 export class AppModule {}

@@ -54,11 +54,12 @@ export class DesignService {
   }
 
   async create(createDesignDto: CreateDesignDto): Promise<Design> {
-    const { prompt } = createDesignDto;
+    const { prompt, designId } = createDesignDto;
     const imageBase64 = await this.getDesignFromExternalAPI(prompt);
 
     const createdDesign = new this.designModel({
-      prompt,
+      ...createDesignDto,
+      designId,
       image: imageBase64,
       image_name: 'output.jpg',
     });

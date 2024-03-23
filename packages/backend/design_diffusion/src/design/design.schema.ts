@@ -26,6 +26,13 @@ export class Design {
   })
   @Prop()
   image: Buffer;
+
+  @ApiProperty({
+    description: 'Design ID',
+    example: 1000,
+  })
+  @Prop()
+  designId: number;
 }
 
 export const DesignSchema = SchemaFactory.createForClass(Design);
