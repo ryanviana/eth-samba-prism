@@ -13,7 +13,7 @@ const NFTGrid = () => {
       setIsLoading(true); // Start loading
       try {
         const fetchedDesigns = await designApi.getDesigns();
-        setDesigns(fetchedDesigns); // Set designs
+        setDesigns(fetchedDesigns);
       } catch (error) {
         console.error("Failed to fetch designs:", error);
       }
@@ -23,7 +23,6 @@ const NFTGrid = () => {
     fetchDesigns();
   }, []);
 
-  // Helper function to convert image data to base64 string
   const imageToBase64 = (imageData: number[]) => {
     return btoa(String.fromCharCode(...new Uint8Array(imageData)));
   };
@@ -50,11 +49,11 @@ const NFTGrid = () => {
               nftItem={{
                 id: design._id,
                 image: `data:image/jpeg;base64,${imageToBase64(design.image.data)}`,
-                name: design.image_hash, // Or another property that suits your data model
-                likes: 10, // Placeholder for likes, adjust as necessary
+                name: design.prompt,
+                likes: 10,
               }}
-              title="Design Collection" // Adjust title as needed
-              listings={[]} // Placeholder, adjust according to your component's props
+              title="Design Collection"
+              listings={[]}
             />
           ))}
         </div>
