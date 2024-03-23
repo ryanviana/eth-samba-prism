@@ -8,6 +8,7 @@ export interface Design {
   image: ImageData;
   image_hash: string;
   designId: number;
+  prompt: string;
 }
 
 const baseUrl = "https://the-prism-backend.vercel.app/designs/";
