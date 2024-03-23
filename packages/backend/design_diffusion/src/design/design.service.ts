@@ -8,6 +8,8 @@ import * as fs from 'fs';
 import * as path from 'path';
 import axios from 'axios';
 import * as crypto from 'crypto';
+import * as dotenv from 'dotenv';
+dotenv.config();
 import { DesignIdCounterService } from 'src/design_id_counter/design_id_counter.service';
 
 @Injectable()
@@ -30,7 +32,7 @@ export class DesignService {
   }
 
   private async getDesignFromExternalAPI(prompt: string): Promise<Buffer> {
-    const api_key = 'SG_44e57559c58654ee';
+    const api_key = process.env.API_KEY;
     const url = 'https://api.segmind.com/v1/sd1.5-inpainting';
 
     const imagePath = path.resolve('image.png');
@@ -74,6 +76,7 @@ export class DesignService {
       designId,
       image: imageBuffer,
       image_hash: imageHash,
+      prompt: prompt,
     });
     // const newDesign = createdDesign.save();
     // return (await newDesign).id;

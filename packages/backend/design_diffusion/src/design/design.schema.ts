@@ -29,6 +29,9 @@ export class Design {
   })
   @Prop()
   designId: number;
+
+  @Prop()
+  prompt: string;
 }
 
 export const DesignSchema = SchemaFactory.createForClass(Design);
