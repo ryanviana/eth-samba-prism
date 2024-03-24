@@ -1,6 +1,6 @@
 ![The Prism Banner](https://github.com/gugasanchez/theprism/assets/62973287/ac16ce4e-cced-4a22-8570-f42ae4346cba)
 
-## The Prism Platform Resources
+# The Prism Platform Resources
 
 - **[The Prism Platform](link)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
 
