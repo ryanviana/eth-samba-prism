@@ -8,9 +8,6 @@ import USDTJson from "../utils/USDT.json";
 import { ExternalProvider, JsonRpcFetchFunc } from "@ethersproject/providers";
 import { useParticleProvider } from "@particle-network/connect-react-ui";
 import { ethers } from "ethers";
-import { toast } from "react-toastify";
-// Importação do toast
-import "react-toastify/dist/ReactToastify.css";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 // Importe o CSS de react-toastify
@@ -145,15 +142,6 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
         const tx_2 = await NFTFactoryContract.buyTShirt(CustomTShirtNFTAddress, 0, price, producerAddress);
         await tx_2.wait();
         router.push("/orders");
-        toast.success("Pedido realizado", {
-          position: "top-center",
-          autoClose: 1000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
       }
     } catch (e) {
       console.log(`${e}`);
