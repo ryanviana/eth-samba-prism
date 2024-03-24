@@ -13,8 +13,12 @@ contract DesignFunctions is FunctionsClient, ConfirmedOwner {
 	bytes public s_lastResponse;
 	bytes public s_lastError;
 
-	//map a prompt with a image_hash
-	mapping(string => string) public promptToImageHash;
+	struct Design {
+		string prompt;
+		string img_hash;
+	}
+
+	mapping(address => Design[]) public userToDesigns;
 
 	error UnexpectedRequestID(bytes32 requestId);
 
@@ -108,12 +112,12 @@ contract DesignFunctions is FunctionsClient, ConfirmedOwner {
 		s_lastResponse = response;
 		s_lastError = err;
 
-		(string memory prompt, string memory img_hash) = abi.decode(
+		(string memory imgPrompt, string memory imgHash) = abi.decode(
 			response,
 			(string, string)
 		);
 
-		promptToImageHash[prompt] = img_hash;
+		userToDesigns[msg.sender].push(Design(imgPrompt, imgHash));
 
 		emit Response(requestId, s_lastResponse, s_lastError);
 	}
