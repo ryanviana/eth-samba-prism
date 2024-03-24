@@ -21,9 +21,8 @@ Unleash your creativity with The Prism, a cutting-edge platform where art meets 
 ## 🏗️ System Architecture
 
 <div align="center">
-  <img src="https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc" width="300" style="margin: 20px;" alt="Architecture Overview"/>
-  <img src="https://github.com/gugasanchez/theprism/assets/62973287/6617f73f-f89b-4ef4-bc57-37dcb0234939" width="300" style="margin: 20px;" alt="Detailed Component View"/> 
-  <img src="https://github.com/gugasanchez/theprism/assets/62973287/bf7928ea-cd22-4f87-b5b5-7f16874fae40" width="300" style="margin: 20px;" alt="Workflow Process"/>
+  <img src="https://github.com/ryanviana/the-prism_eth-samba/assets/70733914/e4555502-4d6e-4235-a39a-298bd192b9ca" width="300" style="margin: 20px;" alt="Workflow Process"/> 
+  <img src="https://github.com/ryanviana/the-prism_eth-samba/assets/70733914/bfc72bd9-7d41-48b3-bbd8-7b8bf6afc1b9" width="300" style="margin: 20px;" alt="NFT Architecture"/>
 </div>
 
 <p align="center">
