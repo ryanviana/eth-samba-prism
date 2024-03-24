@@ -79,18 +79,17 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 ### NFT Factory Contract
 
 - **Address:** [0x869181609CD5A911aE43d695A03A38bba5F74A01](https://sepolia.scrollscan.com/address/0x869181609CD5A911aE43d695A03A38bba5F74A01)
-- **Purpose:** Briefly describe what the NFT Factory contract is for and its main functionalities.
+- **Purpose:** NFT Factory contract used to deploy an ERC721 Contract for each user and manage these contracts. Here we can take a look in all NFT contracts deployed and all purchases made in each of them.
 
 ### CustomTShirtNFT 
 
 - **Address:** [0xb3f28ad65855aa0cd7949adb477e13085348f625](https://sepolia.scrollscan.com/address/0xb3f28ad65855aa0cd7949adb477e13085348f625)
-- **Purpose:** Explain the role of the CustomTShirtNFT contract, such as customizing and minting NFT-based T-shirts.
+- **Purpose:** Each user will have him own CustomTShirtNFT contract. When you create a new T-shirt design and save it, a new NFT will be minted to your address. The NFT Factory is used to call functions in these contracts.
 
 ### USDT Contract
 
 - **Address:** [0x9c4BD6453BdbA9E58F4A881A2C6BB0683EdcA0B9](https://sepolia.scrollscan.com/address/0x9c4BD6453BdbA9E58F4A881A2C6BB0683EdcA0B9)
-- **Purpose:** Description of the USDT contract's role within the project, such as facilitating transactions and payments.
-
+- **Purpose:** Simulate an stablecoin to make payments when an user buy a T-Shirt.
 
 ## 📚 Resources
 
