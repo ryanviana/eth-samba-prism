@@ -59,7 +59,7 @@ Currently, our platform incorporates a cutting-edge application of stable-diffus
 Our platform leverages a cutting-edge stack of technologies and services designed to enhance user experience, ensure security, and foster innovation. Here's a look at the key services in our stack and how we use them:
 
 - **🫰 Particle Connect**: Simplifies the user experience by offering social login capabilities. This service allows users to benefit from blockchain technology without needing in-depth knowledge of how wallets or blockchain work.
-   - [🔎 Explore the Code](packages/backend/design_diffusion/src/design/design.service.ts)
+   - [🔎 Explore the Code](./packages/nextjs/components/ThePrismAppWithProviders.tsx)
 
 
 - **🔗 Chainlink Integration**: Central to our ecosystem, Chainlink Functions are instrumental for executing verifiable API requests. This technology underpins our unique approach, facilitating the generation of a "proof of inspiration" from a given prompt to an image. It's a cornerstone in guaranteeing the authenticity and originality of each design, fostering trust in our creative process.
