@@ -72,6 +72,25 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 
 - **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation.
   - [🔎 Explore the Code](./packages/backend/design_diffusion/src/design/design.service.ts)
+ 
+
+## 📒 Contracts
+
+### NFT Factory Contract
+
+- **Address:** [0x869181609CD5A911aE43d695A03A38bba5F74A01](https://sepolia.scrollscan.com/address/0x869181609CD5A911aE43d695A03A38bba5F74A01)
+- **Purpose:** Briefly describe what the NFT Factory contract is for and its main functionalities.
+
+### CustomTShirtNFT (Account 1)
+
+- **Address:** [0xb3f28ad65855aa0cd7949adb477e13085348f625](https://sepolia.scrollscan.com/address/0xb3f28ad65855aa0cd7949adb477e13085348f625)
+- **Purpose:** Explain the role of the CustomTShirtNFT contract, such as customizing and minting NFT-based T-shirts.
+
+### USDT Contract
+
+- **Address:** [0x9c4BD6453BdbA9E58F4A881A2C6BB0683EdcA0B9](https://sepolia.scrollscan.com/address/0x9c4BD6453BdbA9E58F4A881A2C6BB0683EdcA0B9)
+- **Purpose:** Description of the USDT contract's role within the project, such as facilitating transactions and payments.
+
 
 ## 📚 Resources
 
