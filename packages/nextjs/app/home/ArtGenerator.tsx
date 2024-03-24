@@ -37,6 +37,8 @@ const ArtGenerator: React.FC = () => {
   const handleGenerateNFT = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
+    const imageUrl =
+      "https://img.freepik.com/fotos-premium/uma-camisa-branca-com-fundo-preto-e-as-costas_653449-538.jpg";
     const NFTFactoryAddress = "0x869181609CD5A911aE43d695A03A38bba5F74A01";
     const customProvider = new ethers.providers.Web3Provider(ParticleProvider as ExternalProvider | JsonRpcFetchFunc);
     const signer = customProvider.getSigner();
@@ -45,7 +47,7 @@ const ArtGenerator: React.FC = () => {
 
     const NFTFactoryContract = new ethers.Contract(NFTFactoryAddress, NFTFactoryABI, signer);
 
-    const transaction = await NFTFactoryContract.mintTo(/* URL da imagem */);
+    const transaction = await NFTFactoryContract.mintTo(imageUrl);
 
     await transaction.wait();
 
@@ -53,7 +55,7 @@ const ArtGenerator: React.FC = () => {
   };
 
   const LoadingPlaceholder = () => (
-    <div className="animate-pulse flex flex-col items-center justify-center h-40 w-full bg-gray-200 rounded-lg">
+    <div className="animate-pulse flex flex-col items-center justify-center h-40 w-full blue-glassmorphism rounded-lg">
       <div className="text-lg text-gray-500">Your art is being created...</div>
     </div>
   );
@@ -83,7 +85,7 @@ const ArtGenerator: React.FC = () => {
           {loading ? (
             <LoadingPlaceholder />
           ) : latestDesign ? (
-            <div className="card w-full blue-glassmorphism shadow-lg image-full">
+            <div className="flex flex-col items-center w-full blue-glassmorphism shadow-lg image-full">
               <div className="card-body p-6">
                 <figure>
                   <Image
