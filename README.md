@@ -4,12 +4,20 @@
 
 Unleash your creativity with The Prism, a cutting-edge platform where art meets blockchain to make your designs wearable. Dive into a world where AI-generated images become tangible and every creation is a unique fashion statement.
 
-## 🛠️ Features
+## 🛠️ Features Overview
 
-- **AI-Powered Design**: Turn your inspirations into digital art, authenticated and minted on-chain using Cartesi Rollups.
-- **Seamless Transition to Tangibles**: Easily convert your digital art into custom-made t-shirts through our network of quality producers.
-- **Web3 Wallet Integration**: Simple login using Metamask and Web3 wallet of your preference.
-- **Ownership and Royalties**: Mint your art as NFTs and get rewarded for your creativity through a transparent royalty system.
+- **🎨 Creative Design Production**: Harness the power of self-trained models based on open-source stable-diffusion ML to turn your inspirations into unique digital masterpieces, blockchain-ready.
+
+- **🔐 Exclusive Products & Proof of Inspiration**: Utilize Chainlink functions for verifiable computations, ensuring each artwork's inspiration and uniqueness. Mint your creations as NFTs with Scroll's technology for unmatched exclusivity.
+
+- **🤝 Direct Marketplace for Creators and Manufacturers**: A bridge between digital creators and physical manufacturers, allowing artists to "burn" their NFTs and commission the production of tangible goods that previously existed only in the digital realm.
+
+- **🏭 Smart Manufacturing Guidance**: Advanced models provide precise, confidential parameters to manufacturers, ensuring the production of original and exclusive pieces, safeguarding your creativity.
+
+- **📦 Blockchain-Enhanced Production Chain**: Record the entire journey from design to manufacturing on the blockchain, offering unparalleled security, verifiability, and trust for all parties involved.
+
+- **🛍️ Unique Marketplace for Exclusive Designs**: A dedicated space for designers to showcase and sell their one-of-a-kind pieces to customers seeking truly unique, blockchain-authenticated art and design.
+
 
 ## 🏗️ System Architecture
 <p float="left">
