@@ -1,80 +1,109 @@
-# 🏗 Scaffold-ETH 2
+![The Prism Banner](https://github.com/gugasanchez/theprism/assets/62973287/ac16ce4e-cced-4a22-8570-f42ae4346cba)
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+# The Prism ▲
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+Unleash your creativity with The Prism, a cutting-edge platform where art meets blockchain to make your designs wearable. Dive into a world where AI-generated images become tangible and every creation is a unique fashion statement.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+## ✨ Features Overview
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+- **🎨 Creative Design Production**: Harness the power of self-trained models based on open-source stable-diffusion ML to turn your inspirations into unique digital masterpieces, blockchain-ready.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+- **🔐 Exclusive Products & Proof of Inspiration**: Utilize Chainlink functions for verifiable computations, ensuring each artwork's inspiration and uniqueness. Mint your creations as NFTs with Scroll's technology for unmatched exclusivity.
 
-## Requirements
+- **🤝 Direct Marketplace for Creators and Manufacturers**: A bridge between digital creators and physical manufacturers, allowing artists to "burn" their NFTs and commission the production of tangible goods that previously existed only in the digital realm.
 
-Before you begin, you need to install the following tools:
+- **🏭 Smart Manufacturing Guidance**: Advanced models provide precise, confidential parameters to manufacturers, ensuring the production of original and exclusive pieces, safeguarding your creativity.
 
-- [Node (>= v18.17)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
+- **📦 Blockchain-Enhanced Production Chain**: Record the entire journey from design to manufacturing on the blockchain, offering unparalleled security, verifiability, and trust for all parties involved.
 
-## Quickstart
+- **🛍️ Unique Marketplace for Exclusive Designs**: A dedicated space for designers to showcase and sell their one-of-a-kind pieces to customers seeking truly unique, blockchain-authenticated art and design.
 
-To get started with Scaffold-ETH 2, follow the steps below:
+## 🏗️ System Architecture
 
-1. Clone this repo & install dependencies
+<div align="center">
+  <img src="https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc" width="300" style="margin: 20px;" alt="Architecture Overview"/>
+  <img src="https://github.com/gugasanchez/theprism/assets/62973287/6617f73f-f89b-4ef4-bc57-37dcb0234939" width="300" style="margin: 20px;" alt="Detailed Component View"/> 
+  <img src="https://github.com/gugasanchez/theprism/assets/62973287/bf7928ea-cd22-4f87-b5b5-7f16874fae40" width="300" style="margin: 20px;" alt="Workflow Process"/>
+</div>
 
-```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
-yarn install
-```
+<p align="center">
+  <i>Explore the foundational structure and detailed components that drive our platform, alongside the workflow process that ensures seamless operation.</i>
+</p>
 
-2. Run a local network in the first terminal:
+## 🤖 Machine Learning Model: Current Strategy & Future Vision
 
-```
-yarn chain
-```
+### Current Implementation - Stabble Diffusion
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `hardhat.config.ts`.
+Currently, our platform incorporates a cutting-edge application of stable-diffusion technology, albeit through a paid product not fully tailored to our specific needs. Here's how the process unfolds:
 
-3. On a second terminal, deploy the test contract:
+- **📝 Prompt Submission**: Users input their design idea into our system.
+- **🔗 Proof-of-Inspiration Contract**: This contract records the user's prompt.
+- **🛠️ Stable-Diffusion API Interaction**: Leveraging Chainlink function calls, the system communicates with the stable-diffusion API to generate the design.
+- **🗃️ Image & Hash Management**: The resulting image is stored in our file management system, and a hash of the image is generated.
+- **📊 Mapping Structure Storage**: The original prompt and the image hash are stored together, establishing a verifiable link between the inspiration and the generated image.
 
-```
-yarn deploy
-```
+### Future Vision - Proprietary ML Model
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+#### Enhanced Model Training & Open-Source Accessibility
 
-4. On a third terminal, start your NextJS app:
+- **👩‍🔬 Model Development**: We plan to develop and train our model to tailor it precisely to our platform's requirements. Post-development, the model will be made open-source, enabling public verification of our image processing techniques based on user prompts.
+- **🎛️ Advanced User Interface**: Drawing inspiration from user-friendly frameworks like Fooocus, we aim to offer an interface that provides extensive customization options. Users will have the ability to adjust a wide range of parameters, fostering greater creativity in design generation.
 
-```
-yarn start
-```
+#### Tailored Design Generation
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+- **👕 T-Shirt Design Focus**: Our models will undergo specific training to optimize the generation of t-shirt designs that are not only aesthetically pleasing but also suitable for manufacturing, based on user inputs.
+- **⚙️ Manufacturing Parameters Integration**: In addition to design aesthetics, the model will consider optimal manufacturing parameters to ensure that designs are ready for production, enhancing the bridge between digital creativity and physical merchandise.
 
-Run smart contract test with `yarn hardhat:test`
+## 🛠️ Services Stack
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend in `packages/nextjs/pages`
-- Edit your deployment scripts in `packages/hardhat/deploy`
+Our platform leverages a cutting-edge stack of technologies and services designed to enhance user experience, ensure security, and foster innovation. Here's a look at the key services in our stack and how we use them:
 
-## Documentation
+- **🫰 Particle Connect**: Simplifies the user experience by offering social login capabilities. This service allows users to benefit from blockchain technology without needing in-depth knowledge of how wallets or blockchain work.
+   - [🔎 Explore the Code](packages/backend/design_diffusion/src/design/design.service.ts)
+   - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+- **🔗 Chainlink Integration**: Central to our ecosystem, Chainlink Functions are instrumental for executing verifiable API requests. This technology underpins our unique approach, facilitating the generation of a "proof of inspiration" from a given prompt to an image. It's a cornerstone in guaranteeing the authenticity and originality of each design, fostering trust in our creative process.
+  -  [🔎 Explore the Code](./packages/hardhat/contracts/DesignFunctions.sol)
+  -  [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
-## Contributing to Scaffold-ETH 2
+- **👩‍💻 Scaffold Eth 2**: A comprehensive toolkit for Ethereum developers, Scaffold-ETH 2 helps us rapidly deploy Solidity smart contracts and launch a DApp with a React frontend. It includes Hardhat for smart contract development and Next.js for building user-friendly interfaces, streamlining our development process.
+  - [🔎 Explore the Code](./)
+  - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
+    
+- **⚡️ Scroll**: We use Scroll as our Layer 2 solution to take advantage of lower transaction fees. This is particularly important for our platform since we deal with products that may not have a high aggregated value, making efficiency and cost-effectiveness key.
+    - [🔎 Explore the Code](./)
+    - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
-We welcome contributions to Scaffold-ETH 2!
+- **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation.
+  - [🔎 Explore the Code](./packages/backend/design_diffusion/src/design/design.service.ts)
+  - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+## 📚 Resources
+
+- **[The Prism Platform](link)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
+
+- **[The Prism Pitch Deck](link)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
+
+- **[The Prism Demo](link)**: Experience The Prism Platform in action. Our demo provides a hands-on look at how users can create, mint, and translate digital art into physical products seamlessly.
+
+### Conclusion
+Our project is at the forefront of combining machine learning with fashion design, creating a unique platform for personalized apparel. As we continue to develop and refine our technology, we aim to offer users an unparalleled ability to bring their creative visions to life, whether through owning a unique piece of wearable art or by stepping into the role of a designer in the digital marketplace.
+
+## 📁 Resources
+
+- [Forbes | The Hyper-Personalization trend](https://www.forbes.com/sites/eladnatanson/2023/06/01/hyper-personalization-is-already-here---its-future-is-even-more-cutting-edge/?sh=414917c55cc2)
+- [Forbes | E-commerce 3.0](https://www.forbes.com/sites/onmarketing/2023/08/23/e-commerce-30-the-future-of-retail-is-hyper-personalized/?sh=43c9ce693d30)
+
+## 👥 Team Prism
+- [@ryanviana](https://www.github.com/ryanviana)
+- [@pjvperes](https://www.github.com/pjvperes)
+- [@gugasanchez](https://www.github.com/gugasanchez)
+
+---
+
+🐦 [**Follow us on X**](https://twitter.com/theprism_ctsi)
+
+© 2024 The Prism. A new spectrum of digital art and fashion.
+
+
