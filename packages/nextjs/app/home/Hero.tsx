@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import { useAccount } from "wagmi";
-import { Address } from "~~/components/scaffold-eth";
+import { ConnectButton } from "@particle-network/connect-react-ui";
+import "@particle-network/connect-react-ui/dist/index.css";
 
 const Hero: React.FC = () => {
-  const { address: connectedAddress } = useAccount();
-
   return (
     <div className="flex flex-col justify-center items-center px-4">
       <div className="flex flex-col max-w-[600px] items-start justify-start gap-2">
@@ -17,9 +15,8 @@ const Hero: React.FC = () => {
           Make your ideas the art you always dreamed about with our AI tool. <br />
           Then, easily bring those designs to life through expert producers.
         </p>
-        <div className="flex justify-center items-center space-x-2">
-          <p className="my-2 font-medium">Connected Address:</p>
-          <Address address={connectedAddress} />
+        <div className="mt-4">
+          <ConnectButton />
         </div>
       </div>
     </div>

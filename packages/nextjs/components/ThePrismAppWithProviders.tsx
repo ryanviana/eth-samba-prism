@@ -1,18 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
-import { useTheme } from "next-themes";
+import { useEffect } from "react";
+import { WalletEntryPosition } from "@particle-network/auth";
+import { ScrollSepolia } from "@particle-network/chains";
+import { evmWallets } from "@particle-network/connect";
+import { ModalProvider } from "@particle-network/connect-react-ui";
 import { Toaster } from "react-hot-toast";
 import { WagmiConfig } from "wagmi";
 import { Footer } from "~~/components/Footer";
 import { Header } from "~~/components/Header";
-import { BlockieAvatar } from "~~/components/scaffold-eth";
 import { ProgressBar } from "~~/components/scaffold-eth/ProgressBar";
 import { useNativeCurrencyPrice } from "~~/hooks/scaffold-eth";
 import { useGlobalState } from "~~/services/store/store";
 import { wagmiConfig } from "~~/services/web3/wagmiConfig";
-import { appChains } from "~~/services/web3/wagmiConnectors";
 
 const ThePrismApp = ({ children }: { children: React.ReactNode }) => {
   const price = useNativeCurrencyPrice();
@@ -37,24 +37,33 @@ const ThePrismApp = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const ThePrismAppWithProviders = ({ children }: { children: React.ReactNode }) => {
-  const { resolvedTheme } = useTheme();
-  const isDarkMode = resolvedTheme === "dark";
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <WagmiConfig config={wagmiConfig}>
       <ProgressBar />
-      <RainbowKitProvider
-        chains={appChains.chains}
-        avatar={BlockieAvatar}
-        theme={mounted ? (isDarkMode ? darkTheme() : darkTheme()) : darkTheme()}
+      <ModalProvider
+        options={{
+          projectId: process.env.NEXT_PUBLIC_PARTICLE_PROJECT_ID as string,
+          clientKey: process.env.NEXT_PUBLIC_PARTICLE_CLIENT_KEY as string,
+          appId: process.env.NEXT_PUBLIC_PARTICLE_APP_ID as string,
+          chains: [ScrollSepolia],
+          particleWalletEntry: {
+            displayWalletEntry: false,
+            defaultWalletEntryPosition: WalletEntryPosition.BR,
+            supportChains: [ScrollSepolia],
+            customStyle: {},
+          },
+          wallets: evmWallets({
+            projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID as string,
+            showQrModal: false,
+          }),
+        }}
+        theme={"auto"}
+        language={"en"}
+        walletSort={["Particle Auth", "Wallet"]}
+        particleAuthSort={["email", "phone", "google", "apple", "facebook"]}
       >
         <ThePrismApp>{children}</ThePrismApp>
-      </RainbowKitProvider>
+      </ModalProvider>
     </WagmiConfig>
   );
 };
