@@ -60,13 +60,13 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 
 - **🫰 Particle Connect**: Simplifies the user experience by offering social login capabilities. This service allows users to benefit from blockchain technology without needing in-depth knowledge of how wallets or blockchain work.
 
-- **🔗 Chainlink**: At the heart of our platform, Chainlink Functions enable us to make verifiable API calls. This plays a crucial role in our proprietary model, allowing us to create a proof of inspiration from a prompt to an image, ensuring the authenticity and originality of each design. [🔍](./packages/hardhat/contracts/DesignFunctions.sol)
+- **🔗 Chainlink Integration**: Central to our ecosystem, Chainlink Functions are instrumental for executing verifiable API requests. This technology underpins our unique approach, facilitating the generation of a "proof of inspiration" from a given prompt to an image. It's a cornerstone in guaranteeing the authenticity and originality of each design, fostering trust in our creative process. [🔎 Explore the Code](./packages/hardhat/contracts/DesignFunctions.sol)
 
 - **👩‍💻 Scaffold Eth 2**: A comprehensive toolkit for Ethereum developers, Scaffold-ETH 2 helps us rapidly deploy Solidity smart contracts and launch a DApp with a React frontend. It includes Hardhat for smart contract development and Next.js for building user-friendly interfaces, streamlining our development process.
 
 - **⚡️ Scroll**: We use Scroll as our Layer 2 solution to take advantage of lower transaction fees. This is particularly important for our platform since we deal with products that may not have a high aggregated value, making efficiency and cost-effectiveness key.
 
-- **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation.
+- **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation. [🔎 Explore the Code](packages/backend/design_diffusion/src/design/design.service.ts)
 
 ## 📚 Resources
 
