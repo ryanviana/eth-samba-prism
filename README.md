@@ -60,7 +60,7 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 
 - **🫰 Particle Connect**: Simplifies the user experience by offering social login capabilities. This service allows users to benefit from blockchain technology without needing in-depth knowledge of how wallets or blockchain work.
 
-- **🔗 Chainlink**: At the heart of our platform, Chainlink Functions enable us to make verifiable API calls. This plays a crucial role in our proprietary model, allowing us to create a proof of inspiration from a prompt to an image, ensuring the authenticity and originality of each design.
+- **🔗 Chainlink**: At the heart of our platform, Chainlink Functions enable us to make verifiable API calls. This plays a crucial role in our proprietary model, allowing us to create a proof of inspiration from a prompt to an image, ensuring the authenticity and originality of each design. [🔍](./packages/hardhat/contracts/DesignFunctions.sol)
 
 - **👩‍💻 Scaffold Eth 2**: A comprehensive toolkit for Ethereum developers, Scaffold-ETH 2 helps us rapidly deploy Solidity smart contracts and launch a DApp with a React frontend. It includes Hardhat for smart contract development and Next.js for building user-friendly interfaces, streamlining our development process.
 
