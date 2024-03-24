@@ -116,8 +116,6 @@ Our project is at the forefront of combining machine learning with fashion desig
 
 ---
 
-🐦 [**Follow us on X**](https://twitter.com/theprism_ctsi)
-
 © 2024 The Prism. A new spectrum of digital art and fashion.
 
 
