@@ -75,7 +75,7 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 
 ## 📚 Resources
 
-- **[The Prism Platform]([link](https://the-prism-eth-samba.vercel.app/))**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
+- **[The Prism Platform](https://the-prism-eth-samba.vercel.app/)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
 
 - **[The Prism Pitch Deck](link)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
 
@@ -88,6 +88,7 @@ Our project is at the forefront of combining machine learning with fashion desig
 
 - [Forbes | The Hyper-Personalization trend](https://www.forbes.com/sites/eladnatanson/2023/06/01/hyper-personalization-is-already-here---its-future-is-even-more-cutting-edge/?sh=414917c55cc2)
 - [Forbes | E-commerce 3.0](https://www.forbes.com/sites/onmarketing/2023/08/23/e-commerce-30-the-future-of-retail-is-hyper-personalized/?sh=43c9ce693d30)
+- [The Guardian | AI & Fashion Billionaire Market](https://www.theguardian.com/fashion/2024/feb/08/ai-london-fashion-week)
 
 ## 👥 Team Prism
 - [@ryanviana](https://www.github.com/ryanviana)
