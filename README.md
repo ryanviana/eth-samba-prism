@@ -59,14 +59,25 @@ Currently, our platform incorporates a cutting-edge application of stable-diffus
 Our platform leverages a cutting-edge stack of technologies and services designed to enhance user experience, ensure security, and foster innovation. Here's a look at the key services in our stack and how we use them:
 
 - **🫰 Particle Connect**: Simplifies the user experience by offering social login capabilities. This service allows users to benefit from blockchain technology without needing in-depth knowledge of how wallets or blockchain work.
+   - [🔎 Explore the Code](packages/backend/design_diffusion/src/design/design.service.ts)
+   - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
-- **🔗 Chainlink Integration**: Central to our ecosystem, Chainlink Functions are instrumental for executing verifiable API requests. This technology underpins our unique approach, facilitating the generation of a "proof of inspiration" from a given prompt to an image. It's a cornerstone in guaranteeing the authenticity and originality of each design, fostering trust in our creative process. [🔎 Explore the Code](./packages/hardhat/contracts/DesignFunctions.sol)
+
+- **🔗 Chainlink Integration**: Central to our ecosystem, Chainlink Functions are instrumental for executing verifiable API requests. This technology underpins our unique approach, facilitating the generation of a "proof of inspiration" from a given prompt to an image. It's a cornerstone in guaranteeing the authenticity and originality of each design, fostering trust in our creative process.
+  -  [🔎 Explore the Code](./packages/hardhat/contracts/DesignFunctions.sol)
+  -  [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
 - **👩‍💻 Scaffold Eth 2**: A comprehensive toolkit for Ethereum developers, Scaffold-ETH 2 helps us rapidly deploy Solidity smart contracts and launch a DApp with a React frontend. It includes Hardhat for smart contract development and Next.js for building user-friendly interfaces, streamlining our development process.
-
+  - [🔎 Explore the Code](./)
+  - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
+    
 - **⚡️ Scroll**: We use Scroll as our Layer 2 solution to take advantage of lower transaction fees. This is particularly important for our platform since we deal with products that may not have a high aggregated value, making efficiency and cost-effectiveness key.
+    - [🔎 Explore the Code](./)
+    - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
-- **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation. [🔎 Explore the Code](packages/backend/design_diffusion/src/design/design.service.ts)
+- **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation.
+  - [🔎 Explore the Code](./packages/backend/design_diffusion/src/design/design.service.ts)
+  - [📜 Understand the Usage](https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc)
 
 ## 📚 Resources
 
