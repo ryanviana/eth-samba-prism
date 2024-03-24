@@ -30,9 +30,9 @@ Unleash your creativity with The Prism, a cutting-edge platform where art meets 
   <i>Explore the foundational structure and detailed components that drive our platform, alongside the workflow process that ensures seamless operation.</i>
 </p>
 
-## 🤖 Stable Diffusion Integration: Current Strategy & Future Vision
+## 🤖 Machine Learning Model: Current Strategy & Future Vision
 
-### Current Implementation
+### Current Implementation - Stabble Diffusion
 
 Currently, our platform incorporates a cutting-edge application of stable-diffusion technology, albeit through a paid product not fully tailored to our specific needs. Here's how the process unfolds:
 
@@ -42,7 +42,7 @@ Currently, our platform incorporates a cutting-edge application of stable-diffus
 - **🗃️ Image & Hash Management**: The resulting image is stored in our file management system, and a hash of the image is generated.
 - **📊 Mapping Structure Storage**: The original prompt and the image hash are stored together, establishing a verifiable link between the inspiration and the generated image.
 
-### Future Vision
+### Future Vision - Proprietary ML Model
 
 #### Enhanced Model Training & Open-Source Accessibility
 
