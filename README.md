@@ -82,7 +82,7 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 
 ### CustomTShirtNFT 
 
-- **Address:** [0xb3f28ad65855aa0cd7949adb477e13085348f625](https://sepolia.scrollscan.com/address/0xb3f28ad65855aa0cd7949adb477e13085348f625)
+- **Address** (example deployed to an user): [0xb3f28ad65855aa0cd7949adb477e13085348f625](https://sepolia.scrollscan.com/address/0xb3f28ad65855aa0cd7949adb477e13085348f625)
 - **Purpose:** Each user will have him own CustomTShirtNFT contract. When you create a new T-shirt design and save it, a new NFT will be minted to your address. The NFT Factory is used to call functions in these contracts.
 
 ### USDT Contract
