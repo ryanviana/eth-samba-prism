@@ -5,7 +5,7 @@ import Image from "next/image";
 import { HeartIcon } from "@heroicons/react/24/outline";
 
 const style = {
-  wrapper: `blue-glassmorphism flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group shadow-xl`,
+  wrapper: `bg-[#273359] flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group shadow-xl`,
   imgContainer: `relative h-2/3 w-full overflow-hidden flex justify-center items-center`,
   nftImg: `w-full h-full object-cover transition-transform duration-300 ease-in-out`,
   details: `p-3`,
