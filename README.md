@@ -1,80 +1,105 @@
-# 🏗 Scaffold-ETH 2
+![The Prism Banner](https://github.com/gugasanchez/theprism/assets/62973287/ac16ce4e-cced-4a22-8570-f42ae4346cba)
 
-<h4 align="center">
-  <a href="https://docs.scaffoldeth.io">Documentation</a> |
-  <a href="https://scaffoldeth.io">Website</a>
-</h4>
+# Welcome to The Prism 
 
-🧪 An open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
+Unleash your creativity with The Prism, a cutting-edge platform where art meets blockchain to make your designs wearable. Dive into a world where AI-generated images become tangible and every creation is a unique fashion statement.
 
-⚙️ Built using NextJS, RainbowKit, Hardhat, Wagmi, Viem, and Typescript.
+## 🛠️ Features
 
-- ✅ **Contract Hot Reload**: Your frontend auto-adapts to your smart contract as you edit it.
-- 🪝 **[Custom hooks](https://docs.scaffoldeth.io/hooks/)**: Collection of React hooks wrapper around [wagmi](https://wagmi.sh/) to simplify interactions with smart contracts with typescript autocompletion.
-- 🧱 [**Components**](https://docs.scaffoldeth.io/components/): Collection of common web3 components to quickly build your frontend.
-- 🔥 **Burner Wallet & Local Faucet**: Quickly test your application with a burner wallet and local faucet.
-- 🔐 **Integration with Wallet Providers**: Connect to different wallet providers and interact with the Ethereum network.
+- **AI-Powered Design**: Turn your inspirations into digital art, authenticated and minted on-chain using Cartesi Rollups.
+- **Seamless Transition to Tangibles**: Easily convert your digital art into custom-made t-shirts through our network of quality producers.
+- **Web3 Wallet Integration**: Simple login using Metamask and Web3 wallet of your preference.
+- **Ownership and Royalties**: Mint your art as NFTs and get rewarded for your creativity through a transparent royalty system.
 
-![Debug Contracts tab](https://github.com/scaffold-eth/scaffold-eth-2/assets/55535804/b237af0c-5027-4849-a5c1-2e31495cccb1)
+## 🏗️ System Architecture
+<p float="left">
+  <img src="https://github.com/gugasanchez/theprism/assets/62973287/659ae2a4-095c-42d1-bbac-f07d4656c6dc" width="150" />
+  <img src="https://github.com/gugasanchez/theprism/assets/62973287/6617f73f-f89b-4ef4-bc57-37dcb0234939" width="150" /> 
+  <img src="https://github.com/gugasanchez/theprism/assets/62973287/bf7928ea-cd22-4f87-b5b5-7f16874fae40" width="150" />
+</p>
 
-## Requirements
+## 📌 Run The Prism Locally
 
-Before you begin, you need to install the following tools:
+### Prerequisites
+- Node.js installed (preferably the latest stable version)
+- Git installed on your machine
 
-- [Node (>= v18.17)](https://nodejs.org/en/download/)
-- Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
-- [Git](https://git-scm.com/downloads)
-
-## Quickstart
-
-To get started with Scaffold-ETH 2, follow the steps below:
-
-1. Clone this repo & install dependencies
-
+### Installation
 ```
-git clone https://github.com/scaffold-eth/scaffold-eth-2.git
-cd scaffold-eth-2
-yarn install
+git clone https://github.com/gugasanchez/theprism.git
+cd theprism
 ```
 
-2. Run a local network in the first terminal:
+### Setting up the Frontend
+```
+cd client
+npm install
+npm run codegen
+npm run dev
+```
+The frontend should now be running on `http://localhost:5173` (or another port specified in the console output).
+
+### Setting up the Backend
 
 ```
-yarn chain
+cd the_prism_dapp
+sunodo build
+sunodo run
 ```
 
-This command starts a local Ethereum network using Hardhat. The network runs on your local machine and can be used for testing and development. You can customize the network configuration in `hardhat.config.ts`.
+#### ⚠ 1. Remember to deploy an ERC-20 Contract locally if you want to sign a Metamask transaction to buy a t-shirt ("Confirm order" button).
 
-3. On a second terminal, deploy the test contract:
+#### ⚠ 2. The code within the_prism_diffusion directory is intended for research and development purposes, aimed at continuing the effort to execute Stable Diffusion on Cartesi. We have made significant progress in running it with Docker, but we are currently encountering a cache issue when downloading the Stable Diffusion 1.5 model.
 
-```
-yarn deploy
-```
+#### Therefore, please do not attempt to run this directory; it is meant to be finalized in the continuation of the development process. 
 
-This command deploys a test smart contract to the local network. The contract is located in `packages/hardhat/contracts` and can be modified to suit your needs. The `yarn deploy` command uses the deploy script located in `packages/hardhat/deploy` to deploy the contract to the network. You can also customize the deploy script.
+## 🤖 Stable Diffusion <> The Prism
 
-4. On a third terminal, start your NextJS app:
+### How It Works Now
+Currently, our system operates by taking a user's design prompt through our frontend interface. The core of our process involves the Stable Diffusion model, which utilizes a pre-prepared t-shirt image as a base. With the right parameters set for the Stable Diffusion model, it generates a new t-shirt overlaying the base image with a print that visualizes the user's design idea. This innovative approach allows for quick and customized design generation directly influenced by user input.
 
-```
-yarn start
-```
+#### Steps:
+1. User enters a design prompt on the frontend.
+2. The Stable Diffusion model uses a base t-shirt image and parameters to generate a design.
+3. A t-shirt image featuring the prompt's design idea is created and displayed to the user.
 
-Visit your app on: `http://localhost:3000`. You can interact with your smart contract using the `Debug Contracts` page. You can tweak the app config in `packages/nextjs/scaffold.config.ts`.
+### Future Vision
 
-Run smart contract test with `yarn hardhat:test`
+#### Creating a Unique Design
+1. **Idea Generation:** Users will prompt a design idea through our enhanced interface.
+2. **Design Creation:** A model trained with knowledge about manufacturer parameters will generate an image suitable for production.
+3. **Originality Check:** We will compare the generated design against similar prompts and images. If it surpasses a certain originality threshold, it will be merged with pre-established t-shirt models for user review.
+4. **NFT Creation:** Original designs will qualify for NFT creation, allowing users to claim ownership and sell their designs in a marketplace. Users will also have the option to specify the quantity of NFTs produced.
 
-- Edit your smart contract `YourContract.sol` in `packages/hardhat/contracts`
-- Edit your frontend in `packages/nextjs/pages`
-- Edit your deployment scripts in `packages/hardhat/deploy`
+#### Just Buying a High Personalized T-Shirt
+- This process mirrors the unique design creation but omits the similarity check. Users can directly purchase the personalized t-shirt without the design being linked to an NFT.
 
-## Documentation
+#### Enhanced User Experience
+- For both processes, we plan to implement a frontend console similar to Fooocus, providing users with extensive configuration options beyond simple prompt entry. This will enable the production of highly detailed and personalized designs.
 
-Visit our [docs](https://docs.scaffoldeth.io) to learn how to start building with Scaffold-ETH 2.
+### Conclusion
+Our project is at the forefront of combining machine learning with fashion design, creating a unique platform for personalized apparel. As we continue to develop and refine our technology, we aim to offer users an unparalleled ability to bring their creative visions to life, whether through owning a unique piece of wearable art or by stepping into the role of a designer in the digital marketplace.
 
-To know more about its features, check out our [website](https://scaffoldeth.io).
+## Pitch Slides
+- [The Prism | Pitch | Cartesi Hackathon.pdf](https://github.com/gugasanchez/theprism/files/14706864/The.Prism.Pitch.Cartesi.Hackathon.pdf)
 
-## Contributing to Scaffold-ETH 2
 
-We welcome contributions to Scaffold-ETH 2!
+## 📁 Resources
 
-Please see [CONTRIBUTING.MD](https://github.com/scaffold-eth/scaffold-eth-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-ETH 2.
+- [Forbes | The Hyper-Personalization trend](https://www.forbes.com/sites/eladnatanson/2023/06/01/hyper-personalization-is-already-here---its-future-is-even-more-cutting-edge/?sh=414917c55cc2)
+- [Forbes | E-commerce 3.0](https://www.forbes.com/sites/onmarketing/2023/08/23/e-commerce-30-the-future-of-retail-is-hyper-personalized/?sh=43c9ce693d30)
+
+## 👥 Team Prism
+
+- [@ryanviana](https://www.github.com/ryanviana)
+- [@pjvperes](https://www.github.com/pjvperes)
+- [@gugasanchez](https://www.github.com/gugasanchez)
+
+---
+
+🐦 [**Follow us on X**](https://twitter.com/theprism_ctsi)
+
+
+© 2024 The Prism. A new spectrum of digital art and fashion.
+
+
