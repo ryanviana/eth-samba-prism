@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import NFTFactoryJSON from "../../utils/NFTFactory.json";
 import designApi, { Design } from "../../utils/designApi";
+import { ExternalProvider, JsonRpcFetchFunc } from "@ethersproject/providers";
+import { useParticleProvider } from "@particle-network/connect-react-ui";
+import { ethers } from "ethers";
 
 const ArtGenerator: React.FC = () => {
   const [prompt, setPrompt] = useState("");
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [latestDesign, setLatestDesign] = useState<Design | null>(null);
+  const ParticleProvider = useParticleProvider();
 
   const handleSubmit = async () => {
     setLoading(true); // Start loading
@@ -29,8 +34,21 @@ const ArtGenerator: React.FC = () => {
     return btoa(String.fromCharCode(...new Uint8Array(imageData)));
   };
 
-  const handleGenerateNFT = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleGenerateNFT = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+
+    const NFTFactoryAddress = "0x869181609CD5A911aE43d695A03A38bba5F74A01";
+    const customProvider = new ethers.providers.Web3Provider(ParticleProvider as ExternalProvider | JsonRpcFetchFunc);
+    const signer = customProvider.getSigner();
+
+    const NFTFactoryABI = NFTFactoryJSON.abi;
+
+    const NFTFactoryContract = new ethers.Contract(NFTFactoryAddress, NFTFactoryABI, signer);
+
+    const transaction = await NFTFactoryContract.mintTo(/* URL da imagem */);
+
+    await transaction.wait();
+
     console.log("Generate NFT");
   };
 

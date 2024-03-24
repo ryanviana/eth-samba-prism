@@ -2,11 +2,17 @@
 
 import React, { useEffect, useState } from "react";
 import NFTCard from "../../../components/NFTCard";
+import NFTFactoryJSON from "../../../utils/NFTFactory.json";
 import designApi, { Design } from "../../../utils/designApi";
+import { ExternalProvider, JsonRpcFetchFunc } from "@ethersproject/providers";
+import { useParticleProvider } from "@particle-network/connect-react-ui";
+import { ethers } from "ethers";
 
 const Designs = () => {
   const [designs, setDesigns] = useState<Design[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [balance, setBalance] = useState(0); // Assuming 100 as an example balance
+  const ParticleProvider = useParticleProvider();
 
   useEffect(() => {
     const fetchDesigns = async () => {
@@ -34,6 +40,25 @@ const Designs = () => {
     </div>
   );
 
+  const withdrawRoyalties = async () => {
+    console.log("Withdrawing royalties...");
+
+    const customProvider = new ethers.providers.Web3Provider(ParticleProvider as ExternalProvider | JsonRpcFetchFunc);
+    const signer = customProvider.getSigner();
+
+    const NFTFactoryAddress = "0x869181609CD5A911aE43d695A03A38bba5F74A01";
+
+    const NFTFactoryAbi = NFTFactoryJSON.abi;
+
+    const NFTFactoryContract = new ethers.Contract(NFTFactoryAddress, NFTFactoryAbi, signer);
+
+    const tx_2 = await NFTFactoryContract.withdrawUSDT();
+
+    await tx_2.wait();
+
+    setBalance(0);
+  };
+
   return (
     <div className="flex flex-col flex-1 items-center">
       <div className="flex flex-col items-start sm:w-[70%] w-full sm:px-0 px-4 py-10">
@@ -49,13 +74,22 @@ const Designs = () => {
                   nftItem={{
                     id: design._id,
                     image: `data:image/jpeg;base64,${Buffer.from(design.image.data).toString("base64")}`,
-                    name: design.image_hash,
+                    name: design.prompt,
                     likes: 10,
                   }}
                   title="Design Collection"
                   listings={[]}
                 />
               ))}
+            </div>
+            <div className="mt-8 w-full flex flex-col items-center justify-center">
+              <h2 className="text-2xl font-semibold text-white mb-4 shadow-md">Royalty Balance: {balance} USDT</h2>{" "}
+              <button
+                onClick={withdrawRoyalties}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Withdraw Royalties
+              </button>
             </div>
           </div>
         )}

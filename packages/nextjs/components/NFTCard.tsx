@@ -2,7 +2,18 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import NFTFactoryJSON from "../utils/NFTFactory.json";
+import USDTJson from "../utils/USDT.json";
+import { ExternalProvider, JsonRpcFetchFunc } from "@ethersproject/providers";
+import { useParticleProvider } from "@particle-network/connect-react-ui";
+import { ethers } from "ethers";
+import { toast } from "react-toastify";
+// Importação do toast
+import "react-toastify/dist/ReactToastify.css";
 import { HeartIcon } from "@heroicons/react/24/outline";
+
+// Importe o CSS de react-toastify
 
 const style = {
   wrapper: `bg-[#273359] flex-auto w-[14rem] h-[22rem] my-5 mx-5 rounded-2xl overflow-hidden relative group shadow-xl`,
@@ -58,6 +69,7 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
   const [isListed, setIsListed] = useState(false);
   const [price, setPrice] = useState("");
   const [showModal, setShowModal] = useState(false);
+  const [showApproveTransaction, setShowApproveTransaction] = useState(false); // New state
   const [showConfirmOrder, setShowConfirmOrder] = useState(false);
   const [estimatedPrice, setEstimatedPrice] = useState("");
   const [address, setAddress] = useState({
@@ -70,6 +82,10 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
     country: "",
   });
 
+  const router = useRouter();
+
+  const ParticleProvider = useParticleProvider();
+
   useEffect(() => {
     const listing = listings.find(listing => listing.asset.id === nftItem.id);
     if (listing) {
@@ -81,10 +97,67 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
   const toggleModal = () => setShowModal(!showModal);
 
   const handleEstimatePrice = () => {
-    // Placeholder logic for price estimation
-    const estimated = "49.99 USDT";
+    const estimated = "40 USDT";
     setEstimatedPrice(estimated);
-    setShowConfirmOrder(true);
+    setShowApproveTransaction(true); // Hide approve button
+    setShowConfirmOrder(false);
+  };
+
+  const handleApproveTransaction = async () => {
+    const usdtAddress = "0x9c4BD6453BdbA9E58F4A881A2C6BB0683EdcA0B9";
+    const CustomTShirtNFTAddress = "0xb3f28ad65855aa0cd7949adb477e13085348f625";
+    const price = 40;
+
+    const customProvider = new ethers.providers.Web3Provider(ParticleProvider as ExternalProvider | JsonRpcFetchFunc);
+    const signer = customProvider.getSigner();
+
+    //Approve
+
+    const USDTAbi = USDTJson.abi;
+
+    const USDTContract = new ethers.Contract(usdtAddress, USDTAbi, signer);
+
+    const tx_1 = await USDTContract.approve(CustomTShirtNFTAddress, price * 10 ** 6);
+
+    await tx_1.wait();
+
+    setShowApproveTransaction(false); // Hide approve button
+    setShowConfirmOrder(true); // Show confirm order button
+  };
+
+  const handleConfirmOrder = async () => {
+    try {
+      if (ParticleProvider) {
+        const NFTFactoryAddress = "0x869181609CD5A911aE43d695A03A38bba5F74A01";
+        const CustomTShirtNFTAddress = "0xb3f28ad65855aa0cd7949adb477e13085348f625";
+        const price = 4000; //Considering cents
+        const producerAddress = "0xBef52E7B385fB68d57C95558628e49d3c3997d4F";
+
+        const customProvider = new ethers.providers.Web3Provider(
+          ParticleProvider as ExternalProvider | JsonRpcFetchFunc,
+        );
+        const signer = customProvider.getSigner();
+
+        const NFTFactoryAbi = NFTFactoryJSON.abi;
+
+        const NFTFactoryContract = new ethers.Contract(NFTFactoryAddress, NFTFactoryAbi, signer);
+
+        const tx_2 = await NFTFactoryContract.buyTShirt(CustomTShirtNFTAddress, 0, price, producerAddress);
+        await tx_2.wait();
+        router.push("/orders");
+        toast.success("Pedido realizado", {
+          position: "top-center",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    } catch (e) {
+      console.log(`${e}`);
+    }
   };
 
   const handleChange = (e: { target: { name: any; value: any } }) => {
@@ -194,15 +267,25 @@ const NFTCard: React.FC<NFTCardProps> = ({ nftItem, title, listings }) => {
               value={address.country}
               onChange={handleChange}
             />
-            {!showConfirmOrder && (
+            {!showApproveTransaction && !showConfirmOrder && (
               <button className={style.confirmOrderButton} onClick={handleEstimatePrice}>
                 Estimate Price
               </button>
             )}
+            {showApproveTransaction && (
+              <>
+                <div>Estimated Price: {estimatedPrice}</div>
+                <button className={style.confirmOrderButton} onClick={handleApproveTransaction}>
+                  Approve Transaction
+                </button>
+              </>
+            )}
             {showConfirmOrder && (
               <>
                 <div>Estimated Price: {estimatedPrice}</div>
-                <button className={style.confirmOrderButton}>Confirm Order</button>
+                <button className={style.confirmOrderButton} onClick={handleConfirmOrder}>
+                  Confirm Order
+                </button>
               </>
             )}
           </div>
