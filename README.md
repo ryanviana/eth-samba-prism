@@ -1,5 +1,13 @@
 ![The Prism Banner](https://github.com/gugasanchez/theprism/assets/62973287/ac16ce4e-cced-4a22-8570-f42ae4346cba)
 
+## The Prism Platform Resources
+
+- **[The Prism Platform](link)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
+
+- **[The Prism Pitch Deck](link)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
+
+- **[The Prism Demo](link)**: Experience The Prism Platform in action. Our demo provides a hands-on look at how users can create, mint, and translate digital art into physical products seamlessly.
+
 # Welcome to The Prism 
 
 Unleash your creativity with The Prism, a cutting-edge platform where art meets blockchain to make your designs wearable. Dive into a world where AI-generated images become tangible and every creation is a unique fashion statement.
@@ -25,41 +33,6 @@ Unleash your creativity with The Prism, a cutting-edge platform where art meets 
   <img src="https://github.com/gugasanchez/theprism/assets/62973287/6617f73f-f89b-4ef4-bc57-37dcb0234939" width="150" /> 
   <img src="https://github.com/gugasanchez/theprism/assets/62973287/bf7928ea-cd22-4f87-b5b5-7f16874fae40" width="150" />
 </p>
-
-## 📌 Run The Prism Locally
-
-### Prerequisites
-- Node.js installed (preferably the latest stable version)
-- Git installed on your machine
-
-### Installation
-```
-git clone https://github.com/gugasanchez/theprism.git
-cd theprism
-```
-
-### Setting up the Frontend
-```
-cd client
-npm install
-npm run codegen
-npm run dev
-```
-The frontend should now be running on `http://localhost:5173` (or another port specified in the console output).
-
-### Setting up the Backend
-
-```
-cd the_prism_dapp
-sunodo build
-sunodo run
-```
-
-#### ⚠ 1. Remember to deploy an ERC-20 Contract locally if you want to sign a Metamask transaction to buy a t-shirt ("Confirm order" button).
-
-#### ⚠ 2. The code within the_prism_diffusion directory is intended for research and development purposes, aimed at continuing the effort to execute Stable Diffusion on Cartesi. We have made significant progress in running it with Docker, but we are currently encountering a cache issue when downloading the Stable Diffusion 1.5 model.
-
-#### Therefore, please do not attempt to run this directory; it is meant to be finalized in the continuation of the development process. 
 
 ## 🤖 Stable Diffusion Integration: Current Strategy & Future Vision
 
