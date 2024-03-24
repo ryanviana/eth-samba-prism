@@ -92,11 +92,13 @@ Our platform leverages a cutting-edge stack of technologies and services designe
 
 ## 📚 Resources
 
-- **[The Prism Platform](https://the-prism-eth-samba.vercel.app/)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
+- **[The Prism](https://the-prism-eth-samba.vercel.app/)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
 
-- **[The Prism Pitch Deck](https://www.canva.com/design/DAGASoj2moo/k05LvPOLeTAI26mbPsUXWQ/edit?utm_content=DAGASoj2moo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
+- **[Our Pitch Deck](https://www.canva.com/design/DAGASoj2moo/k05LvPOLeTAI26mbPsUXWQ/edit?utm_content=DAGASoj2moo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
 
-- **[The Prism Demo](link)**: Experience The Prism Platform in action. Our demo provides a hands-on look at how users can create, mint, and translate digital art into physical products seamlessly.
+- **[Our Demo](https://www.youtube.com/watch?v=c19WSWHkE6w)**: Experience The Prism Platform in action. Our demo provides a hands-on look at how users can create, mint, and translate digital art into physical products seamlessly.
+
+- **[Our Backend](https://the-prism-backend.vercel.app/designs)**: The Prism Backend stores and manages base64 encoded images, designed for easy frontend integration.
 
 ### Conclusion
 Our project is at the forefront of combining machine learning with fashion design, creating a unique platform for personalized apparel. As we continue to develop and refine our technology, we aim to offer users an unparalleled ability to bring their creative visions to life, whether through owning a unique piece of wearable art or by stepping into the role of a designer in the digital marketplace.
