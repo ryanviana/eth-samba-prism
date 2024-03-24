@@ -4,7 +4,7 @@
 
 Unleash your creativity with The Prism, a cutting-edge platform where art meets blockchain to make your designs wearable. Dive into a world where AI-generated images become tangible and every creation is a unique fashion statement.
 
-## 🛠️ Features Overview
+## ✨ Features Overview
 
 - **🎨 Creative Design Production**: Harness the power of self-trained models based on open-source stable-diffusion ML to turn your inspirations into unique digital masterpieces, blockchain-ready.
 
@@ -53,6 +53,20 @@ Currently, our platform incorporates a cutting-edge application of stable-diffus
 
 - **👕 T-Shirt Design Focus**: Our models will undergo specific training to optimize the generation of t-shirt designs that are not only aesthetically pleasing but also suitable for manufacturing, based on user inputs.
 - **⚙️ Manufacturing Parameters Integration**: In addition to design aesthetics, the model will consider optimal manufacturing parameters to ensure that designs are ready for production, enhancing the bridge between digital creativity and physical merchandise.
+
+## 🛠️ Services Stack
+
+Our platform leverages a cutting-edge stack of technologies and services designed to enhance user experience, ensure security, and foster innovation. Here's a look at the key services in our stack and how we use them:
+
+- **🫰 Particle Connect**: Simplifies the user experience by offering social login capabilities. This service allows users to benefit from blockchain technology without needing in-depth knowledge of how wallets or blockchain work.
+
+- **🔗 Chainlink**: At the heart of our platform, Chainlink Functions enable us to make verifiable API calls. This plays a crucial role in our proprietary model, allowing us to create a proof of inspiration from a prompt to an image, ensuring the authenticity and originality of each design.
+
+- **👩‍💻 Scaffold Eth 2**: A comprehensive toolkit for Ethereum developers, Scaffold-ETH 2 helps us rapidly deploy Solidity smart contracts and launch a DApp with a React frontend. It includes Hardhat for smart contract development and Next.js for building user-friendly interfaces, streamlining our development process.
+
+- **⚡️ Scroll**: We use Scroll as our Layer 2 solution to take advantage of lower transaction fees. This is particularly important for our platform since we deal with products that may not have a high aggregated value, making efficiency and cost-effectiveness key.
+
+- **🌄 Segmind**: Segmind powers our stable diffusion calls and model training. It provides the API and computational resources we need to generate unique and creative designs from user prompts, ensuring that our platform remains at the forefront of AI-driven digital art creation.
 
 ## 📚 Resources
 
