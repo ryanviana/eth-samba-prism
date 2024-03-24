@@ -1,12 +1,6 @@
 ![The Prism Banner](https://github.com/gugasanchez/theprism/assets/62973287/ac16ce4e-cced-4a22-8570-f42ae4346cba)
 
-- **[The Prism Platform](link)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
-
-- **[The Prism Pitch Deck](link)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
-
-- **[The Prism Demo](link)**: Experience The Prism Platform in action. Our demo provides a hands-on look at how users can create, mint, and translate digital art into physical products seamlessly.
-
-# Welcome to The Prism 
+# Welcome to The Prism 🌈
 
 Unleash your creativity with The Prism, a cutting-edge platform where art meets blockchain to make your designs wearable. Dive into a world where AI-generated images become tangible and every creation is a unique fashion statement.
 
@@ -24,7 +18,6 @@ Unleash your creativity with The Prism, a cutting-edge platform where art meets 
 
 - **🛍️ Unique Marketplace for Exclusive Designs**: A dedicated space for designers to showcase and sell their one-of-a-kind pieces to customers seeking truly unique, blockchain-authenticated art and design.
 
-
 ## 🏗️ System Architecture
 
 <div align="center">
@@ -36,7 +29,6 @@ Unleash your creativity with The Prism, a cutting-edge platform where art meets 
 <p align="center">
   <i>Explore the foundational structure and detailed components that drive our platform, alongside the workflow process that ensures seamless operation.</i>
 </p>
-
 
 ## 🤖 Stable Diffusion Integration: Current Strategy & Future Vision
 
@@ -55,15 +47,20 @@ Currently, our platform incorporates a cutting-edge application of stable-diffus
 #### Enhanced Model Training & Open-Source Accessibility
 
 - **👩‍🔬 Model Development**: We plan to develop and train our model to tailor it precisely to our platform's requirements. Post-development, the model will be made open-source, enabling public verification of our image processing techniques based on user prompts.
-- **🎛️ Advanced User Interface**: Drawing inspiration from user-friendly frameworks like Fooocus ([Fooocus Stable Diffusion UI](https://easywithai.com/stable-diffusion-ui/fooocus/)), we aim to offer an interface that provides extensive customization options. Users will have the ability to adjust a wide range of parameters, fostering greater creativity in design generation.
+- **🎛️ Advanced User Interface**: Drawing inspiration from user-friendly frameworks like Fooocus, we aim to offer an interface that provides extensive customization options. Users will have the ability to adjust a wide range of parameters, fostering greater creativity in design generation.
 
 #### Tailored Design Generation
 
 - **👕 T-Shirt Design Focus**: Our models will undergo specific training to optimize the generation of t-shirt designs that are not only aesthetically pleasing but also suitable for manufacturing, based on user inputs.
 - **⚙️ Manufacturing Parameters Integration**: In addition to design aesthetics, the model will consider optimal manufacturing parameters to ensure that designs are ready for production, enhancing the bridge between digital creativity and physical merchandise.
 
-By advancing in these directions, our platform seeks to empower users with the tools to bring their creative visions to life while ensuring a seamless transition from digital designs to tangible products.
+## 📚 Resources
 
+- **[The Prism Platform](link)**: Discover the full capabilities of The Prism Platform, explore our features, and learn how we're changing the game in digital-to-physical art conversion.
+
+- **[The Prism Pitch Deck](link)**: Dive deeper into our business model, technology, and the market opportunity with our comprehensive pitch deck. Understand our vision, strategy, and how we plan to grow.
+
+- **[The Prism Demo](link)**: Experience The Prism Platform in action. Our demo provides a hands-on look at how users can create, mint, and translate digital art into physical products seamlessly.
 
 ### Conclusion
 Our project is at the forefront of combining machine learning with fashion design, creating a unique platform for personalized apparel. As we continue to develop and refine our technology, we aim to offer users an unparalleled ability to bring their creative visions to life, whether through owning a unique piece of wearable art or by stepping into the role of a designer in the digital marketplace.
@@ -74,7 +71,6 @@ Our project is at the forefront of combining machine learning with fashion desig
 - [Forbes | E-commerce 3.0](https://www.forbes.com/sites/onmarketing/2023/08/23/e-commerce-30-the-future-of-retail-is-hyper-personalized/?sh=43c9ce693d30)
 
 ## 👥 Team Prism
-
 - [@ryanviana](https://www.github.com/ryanviana)
 - [@pjvperes](https://www.github.com/pjvperes)
 - [@gugasanchez](https://www.github.com/gugasanchez)
@@ -82,7 +78,6 @@ Our project is at the forefront of combining machine learning with fashion desig
 ---
 
 🐦 [**Follow us on X**](https://twitter.com/theprism_ctsi)
-
 
 © 2024 The Prism. A new spectrum of digital art and fashion.
 
